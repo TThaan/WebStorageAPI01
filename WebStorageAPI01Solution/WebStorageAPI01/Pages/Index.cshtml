@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"></h1>
+    <br />An entered name gets stored in the browsers' local storage.<br />
+    When you reload the page or reopen the browser it's still there.<br />
+    Pressing the 'Forget' button removes the name from storage.<br />
+    <br /><hr /><br />
+
+    <form>
+        <div class="form-group">
+            <label class="control-label" for="entername">
+                Enter your name:
+                <input class="form-control" id="entername" type="text" required>
+            </label>
+            <input id="submitname" type="submit" value="Enter">
+        </div>
+    </form>
+
+    <br />
+
+    <form>
+        <div class="form-group">
+            <label class="control-label" for="forgetname">
+                Want me to forget you?
+                <input class="form-control" id="forgetname" type="submit" value="Forget">
+            </label>
+        </div>
+    </form>
+
+    <br /><hr /><br />
+    <p class="personalizedParagraph"></p>
+</div>
